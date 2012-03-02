@@ -1,0 +1,5 @@
+
+install vagrant 
+cd databox 
+vagrant up 
+
