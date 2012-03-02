@@ -1,5 +1,18 @@
 
 install vagrant 
+
+sudo gem install vagrant 
+or 
+http://downloads.vagrantup.com/tags/v1.0.0.rc2
+
+
 cd databox 
 vagrant up 
+
+To apply changes to the vm (after running git fetch and merge)
+vagrant provision 
+
+To destroy the box 
+vagrant destroy 
+
 
