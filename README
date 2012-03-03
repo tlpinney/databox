@@ -5,14 +5,21 @@ sudo gem install vagrant
 or 
 http://downloads.vagrantup.com/tags/v1.0.0.rc2
 
-
 cd databox 
 vagrant up 
+vagrant ssh 
+cd /vagrant/sample 
+node.io hello.js 
+node.io reddit.js 
+
+
+
 
 To apply changes to the vm (after running git fetch and merge)
-vagrant provision 
+vagrant reload  
 
 To destroy the box 
 vagrant destroy 
 
+Run examples in /vagrant/sample
 

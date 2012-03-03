@@ -55,6 +55,18 @@ package { "nodejs":
     require => Exec["/usr/bin/apt-get update -y && true"]
 }
 
+package { "npm": 
+    ensure => installed,
+    require => Package["nodejs"]
+}
+
+
+exec { "/usr/bin/npm install -g node.io && /usr/bin/touch /root/nodeio_installed":
+   user => root ,
+   require => Package["npm"],
+   creates => "/root/nodeio_installed"
+} 
+ 
 
 package { "git-core":
  ensure => installed,
@@ -73,5 +85,11 @@ package { "wget" :
   ensure => installed,
 }
 
+file { "/home/vagrant/.profile" :
+   owner => vagrant,
+   group => vagrant,
+   source => "/vagrant/templates/profile",
+   mode => 644
+}
 
 
