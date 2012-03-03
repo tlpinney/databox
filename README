@@ -8,6 +8,7 @@ http://downloads.vagrantup.com/tags/v1.0.0.rc2
 cd databox 
 vagrant up 
 vagrant ssh 
+# this will ssh into the guest box, and the next commands will be run on the guest box 
 cd /vagrant/sample 
 node.io hello.js 
 node.io reddit.js 
