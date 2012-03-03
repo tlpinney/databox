@@ -1,0 +1,16 @@
+* Examples from https://github.com/chriso/node.io
+
+* Simple one liners
+
+echo "mastercard.com" | node.io pagerank
+node.io query "http://www.reddit.com/" a.title
+
+# there is an issue with the web server 
+https://github.com/chriso/node.io/issues/73
+
+
+* run a simple program 
+node.io hello
+node.io reddit 
+
+
